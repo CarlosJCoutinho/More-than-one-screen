@@ -45,11 +45,8 @@ namespace More_than_one_screen
             textBox2.Text = screens.Length.ToString();
             if (screens.Length > 1)
             {
-                setFormLocation(n, screens[1]);
-            }
-            else
-            {
-                setFormLocation(n, screens[0]);
+                //setFormLocation(n, screens[1]);
+                n.Location = Screen.AllScreens[1].WorkingArea.Location;
             }
             n.Show();
         }
